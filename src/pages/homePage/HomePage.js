@@ -27,7 +27,7 @@ const HomePage = () => {
     window.addEventListener('scroll', ChangeNavBackgroundColor);
 
     const ShowNavbarInput = () => {
-        if (window.scrollY >= 300) {
+        if (window.scrollY >= 300 && window.innerWidth >= 760) {
             setNavbarInput(true);
         } else {
             setNavbarInput(false);
@@ -46,17 +46,17 @@ const HomePage = () => {
                     <h3> Drone </h3> <h3>Ship</h3>
                 </div>
                 {navbarInput ? (
-                    
-                        <Fade top>
-                    <div className='nav_search'>
-                        <div className='nav_input_container'>
-                            <label>
-                                <RoomIcon style={{ fontSize: "30px" }} />
-                            </label>
-                            <input placeholder='Type your delivery adress here' />
+
+                    <Fade top>
+                        <div className='nav_search'>
+                            <div className='nav_input_container'>
+                                <label>
+                                    <RoomIcon style={{ fontSize: "30px" }} />
+                                </label>
+                                <input placeholder='Type your delivery adress here' />
+                            </div>
                         </div>
-                    </div>
-                   </Fade> 
+                    </Fade>
                 ) : ''
                 }
 
